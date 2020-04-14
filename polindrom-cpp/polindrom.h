@@ -1,19 +1,22 @@
-
+#include <cstdlib>
+#include <string>
 
 class Polindrom
 {
 private:
-    char* mInput;
+    std::string mInput;
 
 
     void InputLength();
 
 public:
-    Polindrom(/* args */);
+    Polindrom();
     ~Polindrom();
+    
 
+    void Process();
 
-    void SetInput(char* input);
+    void SetInput(std::string input);
 
     void testShow(char* message);
 };

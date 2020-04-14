@@ -3,6 +3,12 @@
 
 int main(){
     Polindrom* polindrom = new Polindrom();
-    polindrom->testShow("ttttt");
+
+    std::string input;
+    std::cin >> input;
+
+    polindrom->SetInput(input);
+    polindrom->Process();
+
     return 0;
 }
