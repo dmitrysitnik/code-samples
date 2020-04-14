@@ -3,13 +3,19 @@
 class Polindrom
 {
 private:
-    /* data */
+    char* mInput;
+
+
+    void InputLength();
+
 public:
     Polindrom(/* args */);
     ~Polindrom();
 
 
-    void testShow(char message[]);
+    void SetInput(char* input);
+
+    void testShow(char* message);
 };
 
 
