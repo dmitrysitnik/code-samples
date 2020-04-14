@@ -34,22 +34,27 @@ void Polindrom::Process(){
 
     InputLength();
     
-    for (int i = 0; i < mInput.size(); i++)
+    for (int i = 0; i < mInput.length(); i++)
     {
         mapping[mInput[i]]++;
     }
 
-    if(mInput.length() % 2 != 0){
-        maxPolindrom += 1;
-    }
-
-    for (std::map<char, int>::iterator element; element != mapping.end(); element++ )
+    for (std::map<char, int>::iterator element = mapping.begin(); element != mapping.end(); element++ )
     {
         int possibleInPolidrom = element->second / 2;
         maxPolindrom += possibleInPolidrom;
+
+        std::cout << "1 = " << element->first << std::endl;
+        std::cout << "2 = " << element->second << std::endl;
+
+    }
+
+    maxPolindrom *= 2;
+
+    if(mInput.length() % 2 != 0){
+        maxPolindrom += 1;
     }
     
-
     std::cout << "maxPolindrom: " << maxPolindrom << std::endl;
     
 }
