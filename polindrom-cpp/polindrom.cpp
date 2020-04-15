@@ -49,8 +49,11 @@ void Polindrom::Process()
 
         //составляем начальную часть полиндрома или запоминаем нечетный символ
         if (possibleInPolidrom > 0)
-        {
-            polindromTemp.push_back(element->first);
+        {   
+            for (int index = 0; index < possibleInPolidrom; index++)
+            {
+                polindromTemp.push_back(element->first);
+            }
         }
         else
         {
@@ -72,7 +75,6 @@ void Polindrom::Process()
         maxPolindrom += 1;
         polindromString.push_back(anyCharWithNoPair);
     }
-
 
     for (int i = polindromTemp.length() - 1; i >= 0; i--)
     {
