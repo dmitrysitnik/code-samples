@@ -1,8 +1,9 @@
 #include <iostream>
 
+//Swap two int values with XOR operator
 
 int main(){
-
+    //Initialize values
     int firstVar, secondVar = 0;
 
     //Default values
