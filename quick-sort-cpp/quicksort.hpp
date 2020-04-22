@@ -5,13 +5,11 @@ private:
 public:
     QuickSort(/* args */);
     ~QuickSort();
-    void quicksort(int arr[], int low, int high);
-
-    void test(int var);
+    static void quicksort(int arr[], int low, int high);
 
     private:
-     void swap(int* first, int* second);
-     int partition(int arr[], int low, int high);
+     static void swap(int* first, int* second);
+     static int partition(int arr[], int low, int high);
 };
 
 QuickSort::QuickSort(/* args */)
@@ -58,11 +56,6 @@ void QuickSort::quicksort(int arr[], int low, int high)
         quicksort(arr, low, pi - 1);
         quicksort(arr, pi + 1, high);
     }
-}
-
-
-void QuickSort::test(int var){
-
 }
 
 
