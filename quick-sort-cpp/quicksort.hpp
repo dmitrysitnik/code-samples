@@ -5,11 +5,13 @@ private:
 public:
     QuickSort(/* args */);
     ~QuickSort();
-    static void quicksort(int arr[], int low, int high);
+    void quicksort(int arr[], int low, int high);
+
+    void test(int var);
 
     private:
-     static void swap(int* first, int* second);
-     static int partition(int arr[], int low, int high);
+     void swap(int* first, int* second);
+     int partition(int arr[], int low, int high);
 };
 
 QuickSort::QuickSort(/* args */)
@@ -21,14 +23,14 @@ QuickSort::~QuickSort()
 }
 
 
-void swap(int *first, int *second)
+void QuickSort::swap(int *first, int *second)
 {
     int temp = *first;
     *first = *second;
     *second = temp;
 }
 
-int partition(int arr[], int low, int high)
+int QuickSort::partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
 
@@ -46,7 +48,7 @@ int partition(int arr[], int low, int high)
     return (i + 1);
 }
 
-void quicksort(int arr[], int low, int high)
+void QuickSort::quicksort(int arr[], int low, int high)
 {
     if (low < high)
     {
@@ -58,5 +60,9 @@ void quicksort(int arr[], int low, int high)
     }
 }
 
+
+void QuickSort::test(int var){
+
+}
 
 

@@ -56,7 +56,9 @@ int main()
 
     int arr2[] = {24, 54, 1, 5, 3, 9, 23, 11, 74};
     int n2 = sizeof(arr2) / sizeof(arr2[0]);
-    QuickSort::quicksort(arr2, 0, n2 - 1);
+
+    QuickSort* quick = new QuickSort();
+    quick->quicksort(arr2, 0, n2 - 1);
     std::cout << "Sorted array: \n";
     printArray(arr2, n2);
 
