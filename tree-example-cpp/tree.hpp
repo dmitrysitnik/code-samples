@@ -15,7 +15,7 @@ class Tree
 private:
     Node *root = nullptr;
 
-    Node* GetLastNode() const;
+    Node* GetLastNode(int* value) const;
 
 public:
     Tree();

@@ -29,7 +29,7 @@ void Tree::AddNode(Node *node)
     }
 }
 
-Node *Tree::GetLastNode(int *value) const
+Node* Tree::GetLastNode(int *value) const
 {
 
     Node *current = root;
@@ -43,4 +43,6 @@ Node *Tree::GetLastNode(int *value) const
             current = current->rightNode;
         }
     }
+
+    return current;
 }
